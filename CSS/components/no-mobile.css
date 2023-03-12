@@ -1,0 +1,29 @@
+@keyframes noMobile {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+
+.no-mobile {
+  position: absolute;
+  z-index: 99;
+  height: 100vh;
+  background-color: var(--yellow);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  top: 0;
+  animation: noMobile 0.5s linear;
+}
+
+@media screen and (max-width: 645px) {
+  .no-mobile {
+    display: none;
+  }
+}
